@@ -7,5 +7,6 @@ export const Error = ({ error }: ErrorProps) => {
     <div className="error-container">
       <div className="error-message">{error}</div>
     </div>
-  );
+  ); 
 };
+
