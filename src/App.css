@@ -1,0 +1,258 @@
+.container {
+    font-family: sans-serif;
+    padding: 20px;
+  }
+  
+  .searchForm {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .formRow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  
+  .formRow label {
+    width: 120px;
+    margin-right: 10px;
+  }
+  
+  .formRow input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+  }
+  
+
+  .formRow select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+  }
+
+  .formRow button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .formRow button:last-child {
+    background-color: #6c757d;
+  }
+
+  .formGroup {
+    margin-right: 10px;
+  }
+  
+  .searchResults {
+    margin-top: 20px;
+  }
+  
+  .searchResults table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .searchResults th,
+  .searchResults td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .searchResults th {
+    background-color: #f2f2f2;
+  }
+  
+  .searchResults tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .searchResults button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+  .searchResults button:first-child {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .searchResults button:nth-child(2) {
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+
+    
+  .searchResults button:nth-child(3) {
+    background-color: rgb(242, 122, 142);
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+  
+
+    
+  .searchResults button:nth-child(4) {
+    background-color: #b817b0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  
+  .searchResults button:last-child {
+    background-color: #ffc107;
+    color: black;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .cancel {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .readonly {
+    background-color: #f0f0f0;
+  }
+
+
+  /* Types rooms */
+
+  .card {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 600px; /* Ajusta el ancho total del card según tus necesidades */
+  }
+  
+  .card .hotel-image {
+    width: 200px; /* Tamaño fijo para la imagen */
+    height: 100%; /* La altura de la imagen se ajusta al contenedor padre */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+  }
+  
+  .card .card-content {
+    padding: 15px;
+    flex: 1; /* Permite que el contenido ocupe el espacio restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espacia los elementos internos verticalmente */
+  }
+  
+  .card .card-content h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .card .card-content p {
+    margin-bottom: 5px;
+  }
+  
+  .card .card-content button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-start; /* Alinea el botón al inicio del eje secundario (izquierda en este caso) */
+  }
+  
+  .card .card-content button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Opcional: Para mejorar la responsividad en pantallas más pequeñas */
+  @media (max-width: 600px) {
+    .card {
+      flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+      width: 100%; /* Ocupa todo el ancho */
+    }
+  
+    .card .hotel-image {
+      width: 100%; /* La imagen ocupa todo el ancho */
+      height: auto; /* La altura se ajusta automáticamente */
+    }
+  
+    .card .card-content {
+      padding: 10px;
+    }
+  }
+
+  /* Basic Nav Styles */
+nav {
+  background-color: #f0f0f0; /* Light grey background */
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd; /* Subtle bottom border */
+}
+
+nav ul {
+  list-style: none;
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: center; /* Center the links */
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0 15px; /* Spacing between list items */
+}
+
+nav a {
+  text-decoration: none;
+  color: #333; /* Dark grey text */
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+}
+
+nav a:hover {
+  background-color: #e0e0e0; /* Slightly darker grey on hover */
+  color: #007bff; /* Blue color on hover */
+}
+
+/* Active Link Style (Optional - if you want to highlight the current page) */
+nav a.active {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Responsive adjustments (optional) */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column; /* Stack links vertically on smaller screens */
+    align-items: center; /* Center items in the column */
+  }
+
+  nav li {
+    margin: 5px 0; /* Adjust vertical spacing */
+  }
+}
