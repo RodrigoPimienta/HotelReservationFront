@@ -10,8 +10,10 @@ export const Profile = () => {
 
     const handlerUpdateProfile = () => {
         if (user?.role == "USER") {
+            console.log("user", user);
             navigate("update");
-        } {
+        }else {
+            console.log("business", user);
             navigate("update/business");
         }
     }

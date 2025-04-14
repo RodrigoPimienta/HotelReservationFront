@@ -89,7 +89,6 @@ export const UpdateHotelAmenity = () => {
                     </div>
                     <div className="formRow">
                         <button type="submit" onClick={updateAmenity}>Update</button>
-                        <button type="button" onClick={() => navigate(-1)}>Cancel</button>
                         <button type="button" className="cancel" onClick={() => navigate(-1)}>Cancel</button>
                     </div>
                 </form>

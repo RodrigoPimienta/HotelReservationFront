@@ -8,5 +8,5 @@ export interface IUser{
     password: string,
     role: "USER" | "OWNER"
     business? : IUserBusiness | null
-    userBusiness?: IUserBusiness
+    userBusiness?: IUserBusiness | null
 }

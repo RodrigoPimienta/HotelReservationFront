@@ -103,7 +103,7 @@ export const User = () => {
                 <select id="role" name="role" value={currentUser.role} onChange={handleChange}>
                   <option value="">Select Room Type</option>
                   <option value="USER">User</option>
-                  <option value="ADMIN">Admin</option>
+                  <option value="OWNER">Owner</option>
                 </select>
               </div>
             </div>

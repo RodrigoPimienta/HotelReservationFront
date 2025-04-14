@@ -23,6 +23,8 @@ import { UpdateProfile } from './components/profile/UpdateProfile';
 import { UpdateProfileOwner } from './components/profile/UpdateProfileOwner';
 import { UpdateHotelImage } from './components/hotels/images/UpdateHotelImage';
 import { AddHotelImage } from './components/hotels/images/AddHotelImage';
+import { User } from './components/register/User';
+import { HotelsAmenitesLayout } from './components/hotels/amenities/HotelsAmenitesLayout';
 
 function App() {
 
@@ -33,7 +35,7 @@ function App() {
           <Routes>
             <Route path='/' element={<HomePublic />} />
             <Route path='/login' element={<Login />} />
-            <Route path='/register' element={<h1>Register</h1>} />
+            <Route path='/register' element={<User />} />
 
             <Route path="private" element={<HomePrivate />}>
               <Route index element={<HotelsLayout />} /> {/* Default route for private section */}
@@ -43,7 +45,7 @@ function App() {
               <Route path="hotels/:hotelId/images" element={<HotelsImagesLayout />} />
               <Route path="hotels/:hotelId/images/new" element={<AddHotelImage />} />
               <Route path="hotels/:hotelId/images/:hotelImageId/update" element={<UpdateHotelImage />} />
-              <Route path="hotels/:hotelId/amenities" element={<HotelsImagesLayout />} />
+              <Route path="hotels/:hotelId/amenities" element={<HotelsAmenitesLayout />} />
               <Route path="hotels/:hotelId/amenities/new" element={<AddHotelAmenity />} />
               <Route path="hotels/:hotelId/amenities/:hotelAmenityId/update" element={<UpdateHotelAmenity />} />
               <Route path="hotels/:hotelId/roomTypes" element={<HotelsRoomTypesLayout />} />
