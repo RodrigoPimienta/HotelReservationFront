@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import { Error } from "../generics/Error"
 import { Loading } from "../generics/Loading"
 import { useEffect, useState } from "react";
@@ -7,16 +6,15 @@ import { useAxiosFetch } from "../../hooks/useAxiosFetch";
 import { ReservationStatus } from "../../enums/ReservationStatus";
 
 export const ReservationsAdmin = () => {
-  const navigate = useNavigate();
   const [reservations, setReservations] = useState<Array<IReservation>>([]);
-  const [data, error, loading, fetchData] = useAxiosFetch({
+  const { data, error, loading, fetchData } = useAxiosFetch({
     method: "POST",
     url: "/reservations/filter",
     params: null,
     body: {}
   });
 
-  const [fetchUpdateReservation, errorUpdate, loadingUpdate, fetchUpdateReservationFunction, fetchDataWithBody] = useAxiosFetch({
+  const { error: errorUpdate, loading: loadingUpdate, fetchDataWithBody } = useAxiosFetch({
     method: "PUT",
     url: `/reservations/0`,
     params: null,

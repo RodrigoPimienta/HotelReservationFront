@@ -22,7 +22,7 @@ export const UpdateHotelRoom = () => {
         price: 0,
     });
 
-    const [fetchDataRoom, errorRoom, loadingRoom, fetchDataRoomFunction] = useAxiosFetch({
+    const { data: fetchDataRoom, error: errorRoom, loading: loadingRoom, fetchData: fetchDataRoomFunction } = useAxiosFetch({
         method: "GET",
         url: `/hotels/${hotelId}/rooms/${hotelRoomId}`,
         params: null,
@@ -30,7 +30,7 @@ export const UpdateHotelRoom = () => {
         executeImmediately: false
     });
 
-    const [fetchRoomTypes, errorRoomTypes, loadingRoomType, fetchDataRoomTypeFunction] = useAxiosFetch({
+    const { data: fetchRoomTypes, error: errorRoomTypes, loading: loadingRoomType } = useAxiosFetch({
         method: "GET",
         url: `/hotels/${hotelId}/roomTypes`,
         params: null,
@@ -38,7 +38,7 @@ export const UpdateHotelRoom = () => {
         executeImmediately: true
     });
 
-    const [fetchUpdateRoom, errorUpdate, loadingUpdate, fetchUpdateHotelFunction] = useAxiosFetch({
+    const { data: fetchUpdateRoom, error: errorUpdate, loading: loadingUpdate, fetchData: fetchUpdateHotelFunction } = useAxiosFetch({
         method: "PUT",
         url: `/hotels/${hotelId}/rooms/${hotelRoomId}`,
         params: null,

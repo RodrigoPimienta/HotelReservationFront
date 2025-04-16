@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import { Error } from "../generics/Error"
 import { Loading } from "../generics/Loading"
 import { useEffect, useState } from "react";
@@ -6,10 +5,9 @@ import { IReservation } from "../../interfaces/IReservation";
 import { useAxiosFetch } from "../../hooks/useAxiosFetch";
 
 export const ReservationsUser = () => {
-    const navigate = useNavigate();
     const [reservations, setReservations] = useState<Array<IReservation>>([]);
 
-    const [data, error, loading, fetchData] = useAxiosFetch({
+    const {data, error, loading} = useAxiosFetch({
         method: "GET",
         url: "/reservations/user",
         params: null,

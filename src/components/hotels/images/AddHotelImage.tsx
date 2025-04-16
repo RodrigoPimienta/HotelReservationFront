@@ -15,7 +15,7 @@ export const AddHotelImage = () => {
         url: ""
     });
 
-    const [data, error, loading, fetchData] = useAxiosFetch({
+    const { data, error, loading, fetchData } = useAxiosFetch({
         method: "POST",
         url: `/hotels/${hotelId}/images`,
         params: null,

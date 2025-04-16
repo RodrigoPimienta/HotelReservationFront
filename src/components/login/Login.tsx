@@ -34,10 +34,10 @@ export const Login = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post<IUser>("http://localhost:8080/users/login", formData, {withCredentials: true});
+      const response = await axios.post<IUser>("http://3.128.31.139:8080/users/login", formData, { withCredentials: true });
       login(response.data);
       navigate("/private/hotels");
-      
+
     } catch (err) {
       setLoading(false);
       setError("Invalid email or password");
@@ -48,10 +48,10 @@ export const Login = () => {
   return (
     <div className="container">
 
-<div className="titleDiv">
-            <h2>Login</h2>
-            <button type="button" onClick={() => navigate("/")}>Home</button>
-          </div>
+      <div className="titleDiv">
+        <h2>Login</h2>
+        <button type="button" onClick={() => navigate("/")}>Home</button>
+      </div>
 
       <div className="searchForm">
         <form onSubmit={handleSubmit}>

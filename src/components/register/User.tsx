@@ -18,7 +18,7 @@ export const User = () => {
   });
 
 
-  const [fetchAddUser, errorAdd, loadingAdd, fetchAddHotelFunction] = useAxiosFetch({
+  const {data: fetchAddUser, error: errorAdd, loading: loadingAdd, fetchData: fetchAddHotelFunction} = useAxiosFetch({
     method: "POST",
     url: `/users`,
     params: null,

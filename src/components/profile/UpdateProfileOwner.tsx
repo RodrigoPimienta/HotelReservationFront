@@ -25,7 +25,7 @@ export const UpdateProfileOwner = () => {
     });
 
 
-    const [fetchUpdateUser, errorUpdate, loadingUpdate, fetchUpdateHotelFunction] = useAxiosFetch({
+    const { data: fetchUpdateUser, error: errorUpdate, loading: loadingUpdate, fetchData: fetchUpdateHotelFunction } = useAxiosFetch({
         method: "PUT",
         url: `/users`,
         params: null,

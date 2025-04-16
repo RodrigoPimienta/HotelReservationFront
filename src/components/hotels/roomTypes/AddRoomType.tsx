@@ -15,7 +15,7 @@ export const AddRoomType = () => {
         price: 0,
     });
 
-    const [data, error, loading, fetchData] = useAxiosFetch({
+    const {data, error, loading, fetchData} = useAxiosFetch({
         method: "POST",
         url: `/hotels/${hotelId}/roomTypes`,
         params: null,

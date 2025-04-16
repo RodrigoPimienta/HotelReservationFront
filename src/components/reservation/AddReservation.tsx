@@ -25,8 +25,6 @@ export const AddReservation = () => {
         checkOut: new Date(checkOut)
     });
 
-    const [RoomType, setRoomType] = useState<IRoomType>(roomType);
-
     const transforReservation = (reservation: IReservation) => {
 
         let checkInString = reservation.checkIn.toISOString().slice(0, 10); // Extrae los primeros 10 caracteres (AAAA-MM-DD)
@@ -37,7 +35,7 @@ export const AddReservation = () => {
             checkOut: checkOutString,
         };
     }
-    const [data, error, loading, fetchData] = useAxiosFetch({
+    const {data, error, loading, fetchData} = useAxiosFetch({
         method: "POST",
         url: "/reservations",
         params: null,

@@ -12,7 +12,7 @@ export const HotelsAdmin = () => {
   const [hotels, setHotels] = useState<Array<IHotel>>([]);
   const [filters, setFilters] = useState<IHotelFilters>({});
 
-  const [data, error, loading, fetchData] = useAxiosFetch({
+  const {data, error, loading, fetchData} = useAxiosFetch({
     method: "POST",
     url: "/hotels/filter",
     params: null,

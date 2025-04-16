@@ -21,7 +21,7 @@ export const HotelsUser = () => {
       checkOut: filters.checkOutDate,
     };
   }
-  const [data, error, loading, fetchData] = useAxiosFetch({
+  const {data, error, loading, fetchData} = useAxiosFetch({
     method: "POST",
     url: "/hotels/roomTypes/filter",
     params: null,

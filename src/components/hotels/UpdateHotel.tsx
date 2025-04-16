@@ -18,7 +18,7 @@ export const UpdateHotel = () => {
         postalCode: ""
     });
 
-    const [fetchDataHotel, errorHotel, loadingHotel, fetchDataHotelFunction] = useAxiosFetch({
+    const {data : fetchDataHotel, error: errorHotel, loading: loadingHotel, fetchData: fetchDataHotelFunction} = useAxiosFetch({
         method: "GET",
         url: `/hotels/${hotelId}`,
         params: null,
@@ -26,7 +26,7 @@ export const UpdateHotel = () => {
         executeImmediately: false
     });
 
-    const [fetchUpdateHotel, errorUpdate, loadingUpdate, fetchUpdateHotelFunction] = useAxiosFetch({
+    const { data: fetchUpdateHotel, error: errorUpdate, loading: loadingUpdate, fetchData: fetchUpdateHotelFunction } = useAxiosFetch({
         method: "PUT",
         url: `/hotels/${hotelId}`,
         params: null,

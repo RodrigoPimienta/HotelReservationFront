@@ -20,7 +20,7 @@ export const AddHotel = () => {
     });
 
 
-    const [data, error, loading, fetchData] = useAxiosFetch({
+    const {data, error, loading, fetchData} = useAxiosFetch({
         method: "POST",
         url: "/hotels",
         params: null,

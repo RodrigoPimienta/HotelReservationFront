@@ -14,7 +14,7 @@ export const UpdateHotelAmenity = () => {
         url: ""
     });
 
-    const [fetchDataAmenity, errorAmenity, loadingAmenity, fetchDataAmenityFunction] = useAxiosFetch({
+    const {data: fetchDataAmenity, error, loading, fetchData: fetchDataAmenityFunction} = useAxiosFetch({
         method: "GET",
         url: `/hotels/${hotelId}/amenities/${hotelAmenityId}`,
         params: null,
@@ -22,7 +22,7 @@ export const UpdateHotelAmenity = () => {
         executeImmediately: false
     });
 
-    const [fetchUpdateAmenity, errorUpdate, loadingUpdate, fetchUpdateHotelFunction] = useAxiosFetch({
+    const {data :fetchUpdateAmenity, error: errorUpdate, loading: loadingUpdate, fetchData: fetchUpdateHotelFunction} = useAxiosFetch({
         method: "PUT",
         url: `/hotels/${hotelId}/amenities/${hotelAmenityId}`,
         params: null,
@@ -92,10 +92,10 @@ export const UpdateHotelAmenity = () => {
                         <button type="button" className="cancel" onClick={() => navigate(-1)}>Cancel</button>
                     </div>
                 </form>
-                {loadingAmenity && <Loading />}
+                {loading && <Loading />}
                 {loadingUpdate && <Loading />}
 
-                {errorAmenity && <div>Error loading hotel data: {errorAmenity}</div>}
+                {error && <div>Error loading hotel data: {error}</div>}
             </div>
         </div>
     );

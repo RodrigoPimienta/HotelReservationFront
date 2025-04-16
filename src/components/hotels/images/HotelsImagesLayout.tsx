@@ -14,7 +14,7 @@ export const HotelsImagesLayout = () => {
   const { hotelId } = useParams<{ hotelId: string }>(); // Obtiene solo hotelId de los parámetros
   const location = useLocation();
   const name = location.state?.name as string; // Obtiene name del state
-  const [data, error, loading, fetchData] = useAxiosFetch({
+  const {data, error, loading} = useAxiosFetch({
     method: 'GET',
     url: `/hotels/${hotelId}/images`,
     params: null,

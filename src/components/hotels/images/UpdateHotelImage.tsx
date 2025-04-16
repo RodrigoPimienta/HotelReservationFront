@@ -14,7 +14,7 @@ export const UpdateHotelImage = () => {
         url: ""
     });
 
-    const [fetchDataImage, errorImage, loadingImage, fetchDataImageFunction] = useAxiosFetch({
+    const { data: fetchDataImage, error: errorImage, loading: loadingImage, fetchData: fetchDataImageFunction } = useAxiosFetch({
         method: "GET",
         url: `/hotels/${hotelId}/images/${hotelImageId}`,
         params: null,
@@ -22,7 +22,7 @@ export const UpdateHotelImage = () => {
         executeImmediately: false
     });
 
-    const [fetchUpdateImage, errorUpdate, loadingUpdate, fetchUpdateHotelFunction] = useAxiosFetch({
+    const { data: fetchUpdateImage, error: errorUpdate, loading: loadingUpdate, fetchData: fetchUpdateHotelFunction } = useAxiosFetch({
         method: "PUT",
         url: `/hotels/${hotelId}/images/${hotelImageId}`,
         params: null,

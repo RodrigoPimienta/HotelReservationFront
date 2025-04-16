@@ -22,7 +22,7 @@ export const AddHotelRoom = () => {
     });
 
 
-    const [data, error, loading, fetchData] = useAxiosFetch({
+    const {data, error, loading, fetchData} = useAxiosFetch({
         method: "POST",
         url: `/hotels/${hotelId}/rooms`,
         params: null,
@@ -31,7 +31,7 @@ export const AddHotelRoom = () => {
     });
 
     
-    const [fetchRoomTypes, errorRoomTypes, loadingRoomType, fetchDataRoomTypeFunction] = useAxiosFetch({
+    const {data: fetchRoomTypes, error: errorRoomTypes, loading: loadingRoomType} = useAxiosFetch({
         method: "GET",
         url: `/hotels/${hotelId}/roomTypes`,
         params: null,

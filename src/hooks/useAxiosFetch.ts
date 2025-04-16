@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios, { AxiosRequestConfig, Method } from "axios";
 
-axios.defaults.baseURL = "http://localhost:8080/";
+axios.defaults.baseURL = "http://3.128.31.139:8080/";
 
 interface AxiosFetchParams {
   url: string;
@@ -97,5 +97,5 @@ export const useAxiosFetch = (params: AxiosFetchParams) => {
     fetchData();
   }, [params.executeImmediately]);
 
-  return [data, error, loading, fetchData, fetchDataWithBody] as const;
+  return {data, error, loading, fetchData, fetchDataWithBody} as const;
 };
